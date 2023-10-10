@@ -44,7 +44,11 @@
     <ImplicitlyExpandNETStandardFacades>false</ImplicitlyExpandNETStandardFacades>
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
-  <ItemGroup>     <Compile Include="Assets\module-omicron-master\CAVE2\Examples\CAVESimulator\Scripts\CAVE2Display.cs" />
+  <ItemGroup>     <Compile Include="Assets\ClockTrigger.cs" />
+     <Compile Include="Assets\DizzyScript.cs" />
+     <Compile Include="Assets\DizzyTrigger.cs" />
+     <Compile Include="Assets\EventManager.cs" />
+     <Compile Include="Assets\module-omicron-master\CAVE2\Examples\CAVESimulator\Scripts\CAVE2Display.cs" />
      <Compile Include="Assets\module-omicron-master\CAVE2\Examples\CAVESimulator\Scripts\CAVE2RemoteFineAdjustment.cs" />
      <Compile Include="Assets\module-omicron-master\CAVE2\Examples\CAVESimulator\Scripts\CustomHMDPerspective.cs" />
      <Compile Include="Assets\module-omicron-master\CAVE2\Examples\CAVESimulator\Scripts\DisplayInfo.cs" />
