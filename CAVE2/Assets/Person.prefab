@@ -77,8 +77,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doWobble: 0
-  leftWobbleThreshold: {x: 0, y: 0, z: 45}
-  rightWobbleThreshold: {x: 0, y: 0, z: -45}
+  leftWobbleThreshold: {x: 0, y: 0, z: 30}
+  rightWobbleThreshold: {x: 0, y: 0, z: -30}
   wobbleSpeed: 0.5
 --- !u!1001 &2226157205173193643
 PrefabInstance:
