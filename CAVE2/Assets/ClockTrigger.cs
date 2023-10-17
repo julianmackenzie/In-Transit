@@ -7,7 +7,9 @@ public class ClockTrigger : MonoBehaviour
 {
 
     [SerializeField] GameObject clock;
+    
     [SerializeField] GameObject clockPromptText;
+    [SerializeField] GameObject trainPromptText;
 
     [SerializeField] GameObject trainEnterZone;
 
@@ -18,7 +20,14 @@ public class ClockTrigger : MonoBehaviour
     public float trainSpeed = 1.0f;
 
     Vector3 trainStopPosition = new Vector3(0, 2.25f, 7);  // position for train to stop at
+    
     bool trainMove = false;  // Starting flag for train entering scene
+
+
+    void Start() {
+        trainPromptText.SetActive(false);
+
+    }
 
 
     void OnTriggerEnter(Collider other) {
@@ -27,7 +36,7 @@ public class ClockTrigger : MonoBehaviour
 
             
 
-            //clockPromptText.SetActive(false);
+            clockPromptText.SetActive(false);
 
             trainMove = true;
 
@@ -43,9 +52,16 @@ public class ClockTrigger : MonoBehaviour
         }
         
 
-    if (Vector3.Distance (trainObject.transform.position, trainStopPosition) < 0.02 && trainMove)  // stop train when it's in position and allow it to be entered
-        trainMove = false;
-        trainEnterZone.SetActive(true);
+        if (Vector3.Distance (trainObject.transform.position, trainStopPosition) < 50 && trainMove) {
+            trainPromptText.SetActive(true);
+        }
+
+
+        if (Vector3.Distance (trainObject.transform.position, trainStopPosition) < 0.02 && trainMove) {
+            // stop train when it's in position and allow it to be entered
+            trainMove = false;
+            trainEnterZone.SetActive(true);
+        }  
 
     }
 
