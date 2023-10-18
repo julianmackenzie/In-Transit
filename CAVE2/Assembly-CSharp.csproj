@@ -49,6 +49,7 @@
      <Compile Include="Assets\DizzyTrigger.cs" />
      <Compile Include="Assets\EnterTrainTrigger.cs" />
      <Compile Include="Assets\EventManager.cs" />
+     <Compile Include="Assets\GrabbableObjectNoCollide.cs" />
      <Compile Include="Assets\module-omicron-master\CAVE2\Examples\CAVESimulator\Scripts\CAVE2Display.cs" />
      <Compile Include="Assets\module-omicron-master\CAVE2\Examples\CAVESimulator\Scripts\CAVE2RemoteFineAdjustment.cs" />
      <Compile Include="Assets\module-omicron-master\CAVE2\Examples\CAVESimulator\Scripts\CustomHMDPerspective.cs" />
