@@ -47,9 +47,15 @@
   <ItemGroup>     <Compile Include="Assets\ClockTrigger.cs" />
      <Compile Include="Assets\DizzyScript.cs" />
      <Compile Include="Assets\DizzyTrigger.cs" />
+     <Compile Include="Assets\EnterHeadspaceTrigger.cs" />
      <Compile Include="Assets\EnterTrainTrigger.cs" />
      <Compile Include="Assets\EventManager.cs" />
+     <Compile Include="Assets\FarlandSkies\Demo\Scripts\Player\FPSWalkerEnhanced.cs" />
+     <Compile Include="Assets\FarlandSkies\Demo\Scripts\Player\SmoothMouseLook.cs" />
+     <Compile Include="Assets\FarlandSkies\Demo\Scripts\Skybox\SkyboxChanger.cs" />
+     <Compile Include="Assets\FarlandSkies\Demo\Scripts\Skybox\SkyboxRotator.cs" />
      <Compile Include="Assets\GrabbableObjectNoCollide.cs" />
+     <Compile Include="Assets\GrabbableObjectReframeText.cs" />
      <Compile Include="Assets\module-omicron-master\CAVE2\Examples\CAVESimulator\Scripts\CAVE2Display.cs" />
      <Compile Include="Assets\module-omicron-master\CAVE2\Examples\CAVESimulator\Scripts\CAVE2RemoteFineAdjustment.cs" />
      <Compile Include="Assets\module-omicron-master\CAVE2\Examples\CAVESimulator\Scripts\CustomHMDPerspective.cs" />
@@ -183,6 +189,8 @@
      <Compile Include="Assets\module-omicron-master\Tests\Mocap\Mocap3DText.cs" />
      <Compile Include="Assets\module-omicron-master\Tests\Mocap\OmicronMocapObject.cs" />
      <Compile Include="Assets\module-omicron-master\Tests\Touch\SimpleCanvasTouch.cs" />
+     <Compile Include="Assets\ReframeMinigame.cs" />
+     <Compile Include="Assets\SpeechParticles.cs" />
      <None Include="Assets\module-omicron-master\Shaders\Transparent-InvisibleShadowCaster.shader" />
      <None Include="Assets\module-omicron-master\CAVE2\Shaders\CAVE2-UI Default.shader" />
      <None Include="Assets\module-omicron-master\Shaders\3D Text (Billboard).shader" />

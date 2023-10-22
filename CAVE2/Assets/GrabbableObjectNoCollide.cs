@@ -269,6 +269,8 @@ public class GrabbableObjectNoCollide : CAVE2Interactable {
             }
         }
         grabbed = true;
+
+        GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
     }
 
     void OnWandGrabRelease()
