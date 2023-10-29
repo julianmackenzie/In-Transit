@@ -5,15 +5,20 @@ using UnityEngine;
 
 public class DizzyTrigger : MonoBehaviour
 {
-    public GameObject overwhelmedPromptText;
-    public GameObject dizzyPromptText;
 
     private AudioSource audioSource; // added whoosh audio
+
+    
+    [SerializeField] GameObject dizzyVoiceline;
+    public AudioClip voiceline;
+
+    AudioSource voicelineSource;
 
     private void Start()
     {
         // Get the AudioSource component from this GameObject
         audioSource = GetComponent<AudioSource>();
+        voicelineSource = dizzyVoiceline.GetComponent<AudioSource>();
     }
 
 
@@ -21,13 +26,13 @@ public class DizzyTrigger : MonoBehaviour
         if (other.tag == "Player") {
             EventManager.OnDizzyTrigger();
 
-            overwhelmedPromptText.SetActive(false);
-            dizzyPromptText.SetActive(true);
 
             if (audioSource != null && audioSource.clip != null)
             {
                 audioSource.Play();
             }
+
+            voicelineSource.PlayOneShot(voiceline, 1F);
 
         }
     }

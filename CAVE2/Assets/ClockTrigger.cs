@@ -8,8 +8,12 @@ public class ClockTrigger : MonoBehaviour
 
     [SerializeField] GameObject clock;
     
-    [SerializeField] GameObject clockPromptText;
-    [SerializeField] GameObject trainPromptText;
+    [SerializeField] GameObject trainPromptVoiceline;
+
+    public AudioClip voiceline;
+    public AudioClip trainsound;
+    
+    AudioSource audioSource;
 
     [SerializeField] GameObject trainEnterZone;
 
@@ -25,18 +29,22 @@ public class ClockTrigger : MonoBehaviour
 
 
     void Start() {
-        trainPromptText.SetActive(false);
-
+        audioSource = trainPromptVoiceline.GetComponent<AudioSource>();
     }
 
+    bool audioPlayed = false;
 
     void OnTriggerEnter(Collider other) {
         if (other.tag == "Player") {
             clock.SetActive(true);
 
+            if (audioPlayed == false) {
+                audioSource.PlayOneShot(voiceline, 1F);
+                audioSource.PlayOneShot(trainsound, 0.7F);
+                audioPlayed = true;
+            }
             
-
-            clockPromptText.SetActive(false);
+            
 
             trainMove = true;
 
@@ -52,12 +60,8 @@ public class ClockTrigger : MonoBehaviour
         }
         
 
-        if (Vector3.Distance (trainObject.transform.position, trainStopPosition) < 50 && trainMove) {
-            trainPromptText.SetActive(true);
-        }
 
-
-        if (Vector3.Distance (trainObject.transform.position, trainStopPosition) < 0.02 && trainMove) {
+        if (Vector3.Distance (trainObject.transform.position, trainStopPosition) < .2 && trainMove) {
             // stop train when it's in position and allow it to be entered
             trainMove = false;
             trainEnterZone.SetActive(true);

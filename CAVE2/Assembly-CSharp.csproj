@@ -45,8 +45,10 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>     <Compile Include="Assets\ClockTrigger.cs" />
+     <Compile Include="Assets\CrowdChatterScript.cs" />
      <Compile Include="Assets\DizzyScript.cs" />
      <Compile Include="Assets\DizzyTrigger.cs" />
+     <Compile Include="Assets\EndingClockTrigger.cs" />
      <Compile Include="Assets\EnterHeadspaceTrigger.cs" />
      <Compile Include="Assets\EnterTrainTrigger.cs" />
      <Compile Include="Assets\EventManager.cs" />
@@ -191,7 +193,6 @@
      <Compile Include="Assets\module-omicron-master\Tests\Touch\SimpleCanvasTouch.cs" />
      <Compile Include="Assets\ReframeMinigame.cs" />
      <Compile Include="Assets\SitPromptTrigger.cs" />
-     <Compile Include="Assets\SpeechParticles.cs" />
      <None Include="Assets\module-omicron-master\Shaders\Transparent-InvisibleShadowCaster.shader" />
      <None Include="Assets\module-omicron-master\CAVE2\Shaders\CAVE2-UI Default.shader" />
      <None Include="Assets\module-omicron-master\Shaders\3D Text (Billboard).shader" />

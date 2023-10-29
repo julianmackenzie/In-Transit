@@ -5,16 +5,25 @@ using UnityEngine;
 public class SitPromptTrigger : MonoBehaviour
 {
 
-    [SerializeField] GameObject dizzyPromptText;
-    [SerializeField] GameObject sitPromptText;
+
+    [SerializeField] GameObject sitVoiceline;
+    public AudioClip voiceline;
+
+    AudioSource audioSource;
 
     // Start is called before the first frame update
+
+
+
+    void Start() {
+        audioSource = sitVoiceline.GetComponent<AudioSource>();
+    }
 
     void OnTriggerEnter(Collider other) {
         if (other.tag == "Player") {
 
-            dizzyPromptText.SetActive(false);
-            sitPromptText.SetActive(true);
+            audioSource.PlayOneShot(voiceline, 1F);
+
 
         }
 

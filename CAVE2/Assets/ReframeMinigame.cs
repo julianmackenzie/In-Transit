@@ -8,6 +8,12 @@ using UnityEngine.SceneManagement;
 public class ReframeMinigame : MonoBehaviour
 {
 
+    [SerializeField] GameObject reframeEndingVoiceline;
+    public AudioClip voiceline;
+    AudioSource audioSource;
+
+
+
     public GameObject word1;
     public GameObject word2;
 
@@ -19,6 +25,10 @@ public class ReframeMinigame : MonoBehaviour
     bool w3 = false;
 
     bool gameWon = false;
+
+    void Start() {
+        audioSource = reframeEndingVoiceline.GetComponent<AudioSource>();
+    }
 
     void Update() {
         if (word1.GetComponent<Collider>().enabled == false) {
@@ -35,6 +45,7 @@ public class ReframeMinigame : MonoBehaviour
             
             if (!gameWon) {
                 gameWon = true;
+                audioSource.PlayOneShot(voiceline, 1F);
                 StartCoroutine(MinigameWinCoroutine());
             }
             
@@ -43,7 +54,7 @@ public class ReframeMinigame : MonoBehaviour
 
 
     IEnumerator MinigameWinCoroutine() {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(13.5f);
 
         SceneManager.LoadScene("Ending");
         
