@@ -14,16 +14,20 @@ public class DizzyTrigger : MonoBehaviour
 
     AudioSource voicelineSource;
 
+    bool hasTriggered;
+
     private void Start()
     {
         // Get the AudioSource component from this GameObject
         audioSource = GetComponent<AudioSource>();
         voicelineSource = dizzyVoiceline.GetComponent<AudioSource>();
+
+        hasTriggered = false;
     }
 
 
     private void OnTriggerEnter(Collider other) {
-        if (other.tag == "Player") {
+        if (other.tag == "Player" && hasTriggered == false) {
             EventManager.OnDizzyTrigger();
 
 
@@ -33,6 +37,7 @@ public class DizzyTrigger : MonoBehaviour
             }
 
             voicelineSource.PlayOneShot(voiceline, 1F);
+            hasTriggered = true;
 
         }
     }

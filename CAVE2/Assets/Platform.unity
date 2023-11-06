@@ -519,7 +519,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 56123f07bdc78e74da14ee2bb5466a84, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2929,7 +2929,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012806552110, guid: c1621f4dd1e8c2748a5a423aa7736d55, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -6.5
       objectReference: {fileID: 0}
     - target: {fileID: 4000012806552110, guid: c1621f4dd1e8c2748a5a423aa7736d55, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3008,19 +3008,130 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012058711088, guid: c1621f4dd1e8c2748a5a423aa7736d55,
+        type: 3}
+      propertyPath: movementScale
+      value: 1.3
+      objectReference: {fileID: 0}
     - target: {fileID: 136000012870809268, guid: c1621f4dd1e8c2748a5a423aa7736d55,
         type: 3}
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 13400000, guid: e4b5def7c85235244b1d55faa4240475,
         type: 2}
-    - target: {fileID: 114000012058711088, guid: c1621f4dd1e8c2748a5a423aa7736d55,
+    - target: {fileID: 1000012607288206, guid: c1621f4dd1e8c2748a5a423aa7736d55, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012306737034, guid: c1621f4dd1e8c2748a5a423aa7736d55,
         type: 3}
-      propertyPath: movementScale
-      value: 1.5
+      propertyPath: fadeTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012306737034, guid: c1621f4dd1e8c2748a5a423aa7736d55,
+        type: 3}
+      propertyPath: minFadingDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012306737034, guid: c1621f4dd1e8c2748a5a423aa7736d55,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011952582294, guid: c1621f4dd1e8c2748a5a423aa7736d55,
+        type: 3}
+      propertyPath: m_Text
+      value: Use the analog stick to move. Some pieces of text can be grabbed with
+        (X), and the laser pointer (L1) can help you see where you're aiming. Circle
+        (O) to open menu/select. Cross (X) to close menu. DPad to navigate menu.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010683909002, guid: c1621f4dd1e8c2748a5a423aa7736d55,
+        type: 3}
+      propertyPath: m_Text
+      value: 'In Transit sets the stage by progressing its users through a simulated
+        anxiety attack. However, as the audience will find, there are methods to reducing
+        the effects of an attack and even de-escalating an attack entirely, present
+        in the experience via audio cues, physical traversal of its scenes, and interactions
+        inside of the character''s "Headspace." While the experience may feel uncomfortable
+        and overwhelming at first, it enables the audience to partake in the calmness
+        of personal space and the peace of a clear head along with the character.
+
+
+        In Transit was developed over 9 weeks by three UIC students. It features typographical
+        elements and models created by Kristina Campbell, particles and materials
+        implemented by Remik Wisniewski, and scenes/interactions/voicelines designed
+        by Julian Mackenzie.
+
+
+        We hope you enjoy In Transit!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011111918770, guid: c1621f4dd1e8c2748a5a423aa7736d55,
+        type: 3}
+      propertyPath: m_Text
+      value: 'In Transit is a roomscale virtual reality experience developed for the
+        CAVE2 system at UIC. Created under the theme of "Good Health and Well-being,"
+        In Transit places its audience into the depths of a metropolitan subway system,
+        particularly into the body of an anxious individual who is late for work.
+
+
+        The experience follows this individual, whose spiral into an anxiety attack
+        is telegraphed using large typographical elements. The space around the player
+        gets claustrophobic, busy with distractions and noises, and feels large, spacious,
+        and dark; these elements lend themselves to the audience''s immersion in the
+        character''s sensory experiences. Dizziness, shortness of breath, and feelings
+        of insignificance and powerlessness accompany the character and the viewers,
+        trapped in an unsafe and chaotic scenario with seemingly no escape.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011641407824, guid: c1621f4dd1e8c2748a5a423aa7736d55,
+        type: 3}
+      propertyPath: m_Text
+      value: 'CS 427 - Creative Coding
+
+        Fall 2023
+
+        University of Illinois at Chicago'
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010541511360, guid: c1621f4dd1e8c2748a5a423aa7736d55,
+        type: 3}
+      propertyPath: m_Text
+      value: In Transit
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011468825520, guid: c1621f4dd1e8c2748a5a423aa7736d55,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Julian Mackenzie
+
+        Kristina Campbell
+
+        Remik Wisniewski'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1621f4dd1e8c2748a5a423aa7736d55, type: 3}
+--- !u!1 &1221700325 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000012607288206, guid: c1621f4dd1e8c2748a5a423aa7736d55,
+    type: 3}
+  m_PrefabInstance: {fileID: 1203516761}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1221700329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1221700325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27fe3288ed1f21244b7f11f7e38cd23c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  voiceline: {fileID: 8300000, guid: 56123f07bdc78e74da14ee2bb5466a84, type: 3}
+  voicelineObject: {fileID: 162531557}
+  canvasUIRoot: {fileID: 1221700325}
+  fadeAfterDistance: 1
+  minFadingDistance: 1
+  fadeAfterTime: 0
+  fadeTime: 3
 --- !u!1 &1227079933
 GameObject:
   m_ObjectHideFlags: 0
@@ -3338,8 +3449,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1272720491}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8, y: 3.5, z: 0}
-  m_LocalScale: {x: 3, y: 7, z: 9}
+  m_LocalPosition: {x: 9, y: 3.5, z: 0}
+  m_LocalScale: {x: 2, y: 7, z: 9}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 48

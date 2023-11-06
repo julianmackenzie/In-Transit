@@ -11,18 +11,19 @@ public class SitPromptTrigger : MonoBehaviour
 
     AudioSource audioSource;
 
-    // Start is called before the first frame update
-
+    bool hasTriggered;
 
 
     void Start() {
         audioSource = sitVoiceline.GetComponent<AudioSource>();
+        hasTriggered = false;
     }
 
     void OnTriggerEnter(Collider other) {
-        if (other.tag == "Player") {
+        if (other.tag == "Player" && hasTriggered == false) {
 
             audioSource.PlayOneShot(voiceline, 1F);
+            hasTriggered = true;
 
 
         }
